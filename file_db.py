@@ -11,7 +11,9 @@ def main():
 
     cur = get_cursor(DB_NAME)
     cur.executescript(table_create)
-    cur.execute(insert_query, ("./wrwer/wer", "cam12", int(time())))
+    cam_name = "cam32"
+    timestamp = int(time())  # adapt
+    cur.execute(insert_query, (f"./wrwer/{cam_name}", cam_name, timestamp))
 
 
 if __name__ == "__main__":

@@ -10,4 +10,4 @@ file_locations (camera_name);
 
 CREATE INDEX IF NOT EXISTS idx_date
 ON
-file_locations (date(created_at));
+file_locations (date(datetime(created_at, 'unixepoch')));
